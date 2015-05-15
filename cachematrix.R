@@ -1,7 +1,10 @@
-## The makeCacheMatrix assigns functions to variables that include using the solve function to cache the inverse of a matrix
-## The cacheSolve function 
+## The makeCacheMatrix assigns functions to variables that includes using the solve 
+## function to cache the inverse of a matrix. The cacheSolve function computes the 
+## inverse of the matrix created by makeCacheMatrix. If the inverse has already 
+## been calculated (and the original matrix has not changed), then the cacheSolve 
+## retrieves the inverse from the cache.
 
-## makeCacheMatrix 
+## makeCacheMatrix creates a matrix and caches its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -18,7 +21,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve computes the inverse of the matrix created by makeCacheMatrix above 
+## or (if available) retrieves the inverse from the cache.
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
